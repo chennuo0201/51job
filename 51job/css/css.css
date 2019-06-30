@@ -1,0 +1,419 @@
+body{
+    margin: 0;
+    padding: 0
+}
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+input{
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+input:focus{
+    outline: none;
+}
+.borders{
+    border: solid 1px gainsboro;
+    box-sizing: border-box;
+}
+.container{
+    width: 100%;
+    min-height: 100vh;
+}
+.top{
+    width: 100%;
+    height: 32px;
+    background: #ff6000;
+}
+.top .setutil{
+    padding: 0 8px;
+    box-sizing: border-box;
+    height: 100%;
+    text-align: center;
+    line-height: 32px;
+    font-size: 14px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.top > .content{
+    width: 1200px;
+    height: 100%;
+    margin: auto;
+    /* background: gainsboro; */
+    display: flex;
+    justify-content: space-between;
+}
+.top .between{
+    display: flex;
+    align-items: center;
+}
+
+.top .down{
+    width: 16px;
+    height: 16px;
+    background: url('../img/arrow.png');
+    background-position: -16px 0;
+    background-repeat: no-repeat;
+    /* 9806 0066 6018 0014 6078 */
+}
+.top .topLeft .phone{
+    width: 10px;
+    height: 14px;
+    background: url('../img/header.png');
+    background-position: -15px -254px;
+    background-repeat: no-repeat;
+    margin-right: 5px;
+}
+.top .topLeft .lanage{
+    position: relative;
+    width: 48px;
+}
+.top .topLeft .lanage .lang{
+    width: 25px;
+}
+.top .topLeft .xiala{
+    position: absolute;
+    top: 32px;
+    left: 0;
+    width: 100%;
+    background: white;
+    border: solid 1px gainsboro;
+    box-sizing: border-box;
+    border-top: none;
+    display: none;
+}
+.top .topLeft .xiala .xialaItem{
+    width: 100%;
+    height: 32px;
+    color: black;
+    text-align: left;
+    padding: 0 8px;
+    box-sizing: border-box;
+}
+.top .topLeft .xiala .xialaItem:hover{
+    background: #f0e4cf;
+    color: #ff6000;
+}
+.top .topLeft .lanage:hover .xiala{
+    display: block;
+}
+
+.top .topLeft .setutil:hover{
+    background: #e45903;
+}
+.top .topLeft .setutil:hover .down{
+    background-position: -16px -16px;
+}
+.top .line{
+    width: 1px;
+    height: 16px;
+    background: rgb(255, 255, 255);
+    margin: 0 5px;
+}
+
+.top .login{
+    padding: 0 40px;
+    background: #ffa000;
+}
+.top .login span:hover{
+    text-decoration:underline;
+}
+.top .topRight .zhaoping{
+    margin: 0 10px;
+}
+
+.nav{
+    width: 100%;
+    border-bottom: solid 1px rgba(220, 220, 220, 0.61);
+    box-sizing: border-box;
+    /* background: gainsboro; */
+}
+.nav > div{
+    width: 1200px;
+    height: 57px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav .navLeft{
+    display: flex;
+    align-items: center;
+}
+.nav .navLeft .logo1{
+    width: 90px;
+    height: 40px;
+    margin-right: 10px;
+} 
+.nav .navLeft .logo2{
+    width: 162px;
+    height: 17px;
+}
+.nav .navRight{
+    display: flex;
+    height: 100%;
+}
+.nav .navRight > .navItem{
+    padding: 0 10px;
+    /* background: gainsboro; */
+    cursor: pointer;
+    line-height: 57px;
+    margin-left: 20px;
+    border-bottom: solid 4px #ff620000;
+    box-sizing: border-box;
+}
+.nav .navRight > .navItem:hover{
+    color: #ff6000;
+}
+.nav .navRight .navActive{
+    font-size: 16px;
+    font-weight: bold;
+    color: #ff6000;
+    border-bottom: solid 4px #ff6200;
+}
+
+/* 赛选部分 */
+.saixuan{
+    width: 1200px;
+    margin:10px auto;
+}
+.saixuan .search{
+    width: 100%;
+    min-height: 100px;
+    background: url('../img/saixuan.png');
+    background-position: 0 0;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    padding: 10px 15px;
+    box-sizing: border-box;
+}
+.saixuan .searchText{
+    margin: auto;
+    height: 86px;
+    background: white;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+}
+.saixuan .searchText .quanwen{
+    width: 240px;
+    height: 100%;
+    background: white;
+    position: relative;
+    border-right: solid 1px gainsboro;
+    box-sizing: border-box;
+}
+.saixuan .searchText .noneBorder{
+    border: none;
+}
+.saixuan .searchTitle{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    display: flex;
+}
+.saixuan .searchTitle .first{
+    width: 75px;
+    height: 56px;
+    text-align: center;
+    line-height: 56px;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+}
+.saixuan .searchTitle .gs{
+    display: none;
+}
+.saixuan .title:hover .gs{
+    display: flex
+}
+.saixuan .searchTitle .hover:hover{
+    background: rgb(238, 238, 238);
+}
+.saixuan .title:hover{
+    background: white;
+    box-shadow: 1px 1px 2px 0px gainsboro;
+}
+.saixuan .searchInsert{
+    width: 100%;
+    height: 30px;
+    position: relative;
+    top: 49%;
+}
+.saixuan .searchInsert input{
+    padding-left: 21.5px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+.saixuan .colorGray{
+    color: gray;
+    cursor: pointer;
+}
+.saixuan .search .btnSearch{
+    width: 150px;
+    height: 100%;
+    position: relative;
+}
+.saixuan .search .btnSearch div{
+    width: 90px;
+    height: 44px;
+    text-align: center;
+    line-height: 44px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: #ff6000;
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+}
+.saixuan .cainixihuan{
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+}
+.saixuan .cainixihuan > span{
+    color: white;
+    margin-right: 20px;
+    cursor: pointer;
+}
+.saixuan .cainixihuan > span:nth-child(1)~:hover{
+    color: #ff6000;
+}
+.saixuan .keyWords{
+    width: 100%;
+    margin-top: 10px;
+    /* background: gainsboro; */
+}
+.saixuan .keyWordsItem{
+    width: 100%;
+    min-height: 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+    border-bottom: solid 1px gainsboro;
+    font-size: 12px;
+    box-sizing: border-box;
+}
+.saixuan .keyWordsItem:last-child{
+    border: none;
+}
+.saixuan .keyWordsItem .kwleft{
+    width: 85px;
+    height: 35px;
+    line-height: 35px;
+    color: gray;
+}
+.saixuan .keyWordsItem .kwContent{
+    width: 900px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.saixuan .keyWordsItem .overflow{
+    height: 35px;
+    overflow: hidden;
+}
+.saixuan .keyWordsItem .kwCtItem{
+    padding: 0 10px;
+    height: 35px;
+    line-height: 35px;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+.saixuan .keyWordsItem .kwCtItem .checkBox{
+    width: 15px;
+    height: 15px;
+    border: solid 1px gainsboro;
+    box-sizing: border-box;
+    margin-right: 5px;
+    display: none;
+}
+.saixuan .keyWordsItem .kwCtItem .kwChecked{
+    background: url('../img/gou.png');
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    border: solid 1px #ff6000;
+}
+.saixuan .keyWordsItem .kwCtItem:hover{
+    color: #ff6000;
+}
+.saixuan .keyWordsItem .kwActive{
+    color: #ff6000;
+    font-weight: 600
+}
+.saixuan .keyWordsItem .kwmore{
+    width: 150px;
+    height: 35px;
+    display: flex;
+}
+/* 内容 */
+.container .contents{
+    width: 1200px;
+    margin:30px auto;
+    /* background: gainsboro; */
+    min-height: 10px;
+}
+.sorted{
+    width: 100%;
+    height: 44px;
+    border-top: solid 1px gainsboro;
+    border-bottom: solid 1px gainsboro;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.fenye{
+    display: flex;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+.fenye .num{
+    color: #ff6000;
+}
+.yema{
+    display: flex;
+    align-items: center;
+}
+.pageChange{
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    background: rgb(235, 235, 235);
+    cursor: pointer;
+}
+.boxLists{
+    width: 100%;
+}
+.boxLists .jobItem{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5px;
+    box-sizing: border-box;
+    border-bottom: dotted 1px rgb(235, 235, 235);
+}
+.boxLists .jobItem:first-child{
+    border-bottom: solid 1px rgb(235, 235, 235);
+}
+.boxLists .jobItem:first-child > div:first-child{
+    color: #ff6000;
+}

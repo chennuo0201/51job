@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src = "http://106.14.198.191/ajax.js"></script>
+    <style>
+    input{
+        display: block;
+        margin-bottom: 10px;
+    }
+    </style>
+</head>
+<body>
+    <input type="number" class="input1" onkeyup="value=value.replace(/[^\d\.]/g,'')" onchange="value=value.replace(/[^\d\.]/g,'')">
+    <input type="text" class="input2" onkeyup="value=value.replace(/[^\a-\z\A-\Z0-9]/g,'')" onchange="value=value.replace(/[^\a-\z\A-\Z0-9]/g,'')">
+    <input type="text">
+    <input type="text">
+    <button>确定</button>
+
+</body>
+
+<script>
+function getNode(node){
+    return document.querySelector(node)
+}
+function getNodes(node){
+    return document.querySelectorAll(node)
+}
+
+let button = getNode('button');
+let inputs = getNodes('input');
+
+// console.log(inputs)
+
+button.onclick=function(){
+    return 
+    let obj = {
+        title:inputs[0].value,
+        company:inputs[1].value,
+        address:inputs[2].value,
+        prices:inputs[3].value,
+        time:(new Date()).valueOf(),
+    }
+    let lists=[
+    {
+        title:inputs[0].value,
+        company:inputs[1].value,
+        address:inputs[2].value,
+        prices:inputs[3].value,
+        time:(new Date()).valueOf(),
+    },{
+        title:inputs[0].value,
+        company:inputs[1].value,
+        address:inputs[2].value,
+        prices:inputs[3].value,
+        time:(new Date()).valueOf(),
+    },{
+        title:inputs[0].value,
+        company:inputs[1].value,
+        address:inputs[2].value,
+        prices:inputs[3].value,
+        time:(new Date()).valueOf(),
+    },{
+        title:inputs[0].value,
+        company:inputs[1].value,
+        address:inputs[2].value,
+        prices:inputs[3].value,
+        time:(new Date()).valueOf(),
+    },{
+        title:inputs[0].value,
+        company:inputs[1].value,
+        address:inputs[2].value,
+        prices:inputs[3].value,
+        time:(new Date()).valueOf(),
+    },{
+        title:inputs[0].value,
+        company:inputs[1].value,
+        address:inputs[2].value,
+        prices:inputs[3].value,
+        time:(new Date()).valueOf(),
+    },{
+        title:inputs[0].value,
+        company:inputs[1].value,
+        address:inputs[2].value,
+        prices:inputs[3].value,
+        time:(new Date()).valueOf(),
+    },{
+        title:inputs[0].value,
+        company:inputs[1].value,
+        address:inputs[2].value,
+        prices:inputs[3].value,
+        time:(new Date()).valueOf(),
+    },{
+        title:inputs[0].value,
+        company:inputs[1].value,
+        address:inputs[2].value,
+        prices:inputs[3].value,
+        time:(new Date()).valueOf(),
+    },{
+        title:inputs[0].value,
+        company:inputs[1].value,
+        address:inputs[2].value,
+        prices:inputs[3].value,
+        time:(new Date()).valueOf(),
+    },{
+        title:inputs[0].value,
+        company:inputs[1].value,
+        address:inputs[2].value,
+        prices:inputs[3].value,
+        time:(new Date()).valueOf(),
+    },{
+        title:inputs[0].value,
+        company:inputs[1].value,
+        address:inputs[2].value,
+        prices:inputs[3].value,
+        time:(new Date()).valueOf(),
+    },{
+        title:inputs[0].value,
+        company:inputs[1].value,
+        address:inputs[2].value,
+        prices:inputs[3].value,
+        time:(new Date()).valueOf(),
+    }
+    ]
+    // console.log(obj)
+    lists.forEach(function(item,index){
+        addShuju(item)
+    })
+    
+}
+
+function addShuju(obj){
+    Ajax.post(
+        'http://106.14.212.56:8080/happy/add/',
+        JSON.stringify({
+            db:'cn',
+            table:'product',
+            jsonMessage:obj
+        }),
+        '',
+        function(res){
+            console.log(res)
+        }
+    )
+}
+// let inp1=getNode('.input1');
+// // onclick onchange onkeydown  oninput onkeyup onblur onfocus
+
+// // getNode('.input2').onfocus=function(){
+// //     // alert(1)
+// // }
+// inp1.oninput=function(e){
+//     if(e.target.value.length > 10){
+//         button.innerHTML=e.target.value
+//         getNode('.input2').focus()
+//     }
+    
+
+// }
+
+</script>
+</html>

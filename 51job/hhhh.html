@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h2>AJAX</h2>
+    <!-- <button type="button" onclick="loadXMLDoc()">请求数据</button> -->
+     <div id="myDiv"></div>
+
+</body>
+<script>
+function loadXMLDoc()
+{
+var xmlhttp;
+if (window.XMLHttpRequest)
+  {
+  xmlhttp=new XMLHttpRequest();
+  }
+else
+  {
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+xmlhttp.onreadystatechange=function()
+  {
+  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+    {
+    document.getElementById("myDiv").innerHTML=JSON.parse(xmlhttp.responseText);
+    }
+  }
+xmlhttp.open("GET","http://106.14.212.56:8080/happy/queryTable?db=cn&table=product",true);
+xmlhttp.send();
+}
+loadXMLDoc()
+</script>
+</html>
